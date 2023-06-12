@@ -1,0 +1,7 @@
+.container{
+    width: 90vh;
+}
+
+.card{
+    flex-basis: 30%;
+}

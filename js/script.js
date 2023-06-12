@@ -50,7 +50,7 @@ console.table(staff);
 const showcase = document.getElementById('showcase');
 
 
-// <div class="card bg-white" style="width: 18rem;">
+// <div class="card bg-white">
 //     <img src="img/FOTO" class="card-img-top" alt="NOME E COGNOME">
 //     <div class="card-body">
 //         <p class="card-text">NOME E COGNOME</p>
@@ -60,16 +60,16 @@ const showcase = document.getElementById('showcase');
 
 // mi preparo il 'montaggio' dello showcase
 let staffShowcase = '';
-
+// monto lo showcase con un ciclo
 for (let i = 0; i < staff.length; i++){
     const person = staff[i];
-    staffShowcase +=   `<div class="card bg-white" style="width: 18rem;">
-                            <img src="img/FOTO" class="card-img-top" alt="NOME E COGNOME"></img>
+    staffShowcase +=   `<div class="card bg-white shadow rounded">
+                            <img src="img/${person.photo}" class="card-img-top" alt="${person.name}"></img>
                             <div class="card-body">
-                                <p class="card-text">NOME E COGNOME</p>
-                                <p class="card-text">PROFESSIONE</p>
+                                <p class="card-text fw-semibold">${person.name}</p>
+                                <p class="card-text fw-lighter">${person.profession}</p>
                             </div>
                         </div>`
 }
-
+//restituisco in pagina
 showcase.innerHTML = staffShowcase;
