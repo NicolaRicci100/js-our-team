@@ -47,13 +47,29 @@ const staff = [
 console.table(staff);
 
 // prendo la bacheca dal DOM
-const staffShowcase = document.getElementById('showcase');
+const showcase = document.getElementById('showcase');
 
 
 // <div class="card bg-white" style="width: 18rem;">
-//     <img src="FOTO" class="card-img-top" alt="NOME E COGNOME">
+//     <img src="img/FOTO" class="card-img-top" alt="NOME E COGNOME">
 //     <div class="card-body">
 //         <p class="card-text">NOME E COGNOME</p>
 //         <p class="card-text">PROFESSIONE</p>
 //     </div>
 // </div>
+
+// mi preparo il 'montaggio' dello showcase
+let staffShowcase = '';
+
+for (let i = 0; i < staff.length; i++){
+    const person = staff[i];
+    staffShowcase +=   `<div class="card bg-white" style="width: 18rem;">
+                            <img src="img/FOTO" class="card-img-top" alt="NOME E COGNOME"></img>
+                            <div class="card-body">
+                                <p class="card-text">NOME E COGNOME</p>
+                                <p class="card-text">PROFESSIONE</p>
+                            </div>
+                        </div>`
+}
+
+showcase.innerHTML = staffShowcase;
