@@ -46,3 +46,14 @@ const staff = [
 // stampo array in console
 console.table(staff);
 
+// prendo la bacheca dal DOM
+const staffShowcase = document.getElementById('showcase');
+
+
+// <div class="card bg-white" style="width: 18rem;">
+//     <img src="FOTO" class="card-img-top" alt="NOME E COGNOME">
+//     <div class="card-body">
+//         <p class="card-text">NOME E COGNOME</p>
+//         <p class="card-text">PROFESSIONE</p>
+//     </div>
+// </div>
