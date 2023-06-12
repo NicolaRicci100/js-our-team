@@ -43,3 +43,6 @@ const staff = [
         photo: "barbara-ramos-graphic-designer.jpg",
     },
 ];
+// stampo array in console
+console.table(staff);
+
